@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		body, div, canvas  
+		{
+			margin: 0px;
+			padding: 0px; 
+		}
+		
+		.buttons
+		{
+			width: 100px;
+			margin-right: 10px;
+			float: left;
+			height: 45px;
+			width: 100px;
+		}
+		
+		#reset-button, #speed-button
+		{
+			margin-left: 80px;
+		}
+		
+		#button-div
+		{
+			margin-top: 20px;
+			margin-left: 100px;
+		}
+	</style>
+	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="./gobackn.js"></script>
+</head>
+
+<body onload = "goBackN.init()">
+	<div id = "container">
+		<div><canvas id="canvas" height ="450" width="1200"></canvas></div>
+		<div id = "button-div">
+		<div><input type = "button" class = "buttons" onclick="goBackN.sendNewPacket()" id = "send-button" value ="send new"></input></div>
+		<div><input type = "button" class = "buttons" onclick="goBackN.pause()" id = "pause-button"  value = "stop animation"></input></div>
+		<div><input type = "button" class = "buttons" onclick="goBackN.dropPackets()" id = "kill-button"  value = "kill packet"  disabled ="true"></div>
+		<div><input type = "button" class = "buttons" onclick="goBackN.speedUp()" id = "speed-button" value = "speed up"></input></div>	
+		<div><input type = "button" class = "buttons" onclick="goBackN.slowDown()" id = "slow-button" value = "slow down"></input></div>
+		<div><input type = "button" class = "buttons" onclick="goBackN.reset()" id = "reset-button"  value = "reset" ></div>
+		</div>
+		<div><canvas id="text-canvas" height ="100" width="1200"></canvas></div>
+	</div>
+</body>
+</html>
